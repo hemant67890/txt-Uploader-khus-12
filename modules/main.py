@@ -27,12 +27,12 @@ bot = Client(
     bot_token=bot_token)
 
 
-@bot.on_message(filters.command(["startD"]))
+@bot.on_message(filters.command(["Started"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text(f"🕊️𝐇𝐄𝐋𝐋𝐎  𝐔𝐒𝐄𝐑 ❤️❤️❤️ [{m.from_user.first_name}](tg://user?id={m.from_user.id})\n\n𝐏𝐑𝐄𝐒𝐒  /Sorry 😔 𝐒𝐄𝐍𝐃 𝐊𝐀𝐑𝐎 𝐀𝐔𝐑 𝐂𝐎𝐔𝐑𝐒𝐄 𝐔𝐏𝐋𝐎𝐀𝐃𝐄 𝐊𝐀𝐑𝐍𝐀 𝐒𝐓𝐀𝐑𝐓 𝐊𝐀𝐑𝐎 𝐁𝐄 😂😂")
 
 
-@bot.on_message(filters.command("stop"))
+@bot.on_message(filters.command("Ruko"))
 async def restart_handler(_, m):
     await m.reply_text("**𝐒𝐓𝐎𝐏𝐏𝐄𝐃**", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -100,7 +100,7 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("**𝐄𝐧𝐭𝐞𝐫 𝐲𝐨𝐮𝐫 𝐧𝐚𝐦𝐞 𝐦𝐮𝐬𝐭**\n\n**𝐎𝐑**\n\n`[—(••÷[ Caption ]÷••)— ]`")
+    await editable.edit("**𝐄𝐧𝐭𝐞𝐫 𝐲𝐨𝐮𝐫 𝐧𝐚𝐦𝐞 𝐦𝐮𝐬𝐭**\n\n**𝐎𝐑**\n\n`[—(••÷[ CAPTION ]÷••)— ]`")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
@@ -117,7 +117,7 @@ async def account_login(bot: Client, m: Message):
     await input6.delete(True)
     await editable.delete()
     thumb = input6.text
-    x=await m.reply("𝗜𝗻 𝗖𝗮𝘀𝗲 𝗬𝗼𝘂𝗿 𝗧𝗫𝗧 , 𝗖𝗮𝗿𝗲𝗲𝗿𝘄𝗶𝗹𝗹 𝗮𝗽𝗽, 𝗦𝗲𝗻𝗱 𝗕𝗮𝘁𝗰𝗵 𝗧𝗼𝗸𝗲𝗻\n\n𝐎𝐑\n\n`Caption`")
+    x=await m.reply("𝗜𝗻 𝗖𝗮𝘀𝗲 𝗬𝗼𝘂𝗿 𝗧𝗫𝗧 , 𝗖𝗮𝗿𝗲𝗲𝗿𝘄𝗶𝗹𝗹 𝗮𝗽𝗽, 𝗦𝗲𝗻𝗱 𝗕𝗮𝘁𝗰𝗵 𝗧𝗼𝗸𝗲𝗻\n\n𝐎𝐑\n\n`CAPTION`")
     input7: Message = await bot.listen(editable.chat.id)
     authkey = input7.text
     await input7.delete(True)
@@ -171,8 +171,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**𝐕𝐈𝐃𝐄𝐎 𝐈𝐃 {str(count).zfill(3)}➪** {name1} {res} [Alex].mkv\n**𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➪** {raw_text0}\n\n**𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗕𝗬 ➪** {raw_text3}\n\n'
-                cc1 = f'**𝗣𝗗𝗙 𝗜𝗗 {str(count).zfill(3)}➪** {name1} [Alex].pdf \n**𝗕𝗔𝗧𝗖𝗛 𝗡𝗔𝗠𝗘 ➪** {raw_text0}\n\n**𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗕𝗬 ➪** {raw_text3}\n\n'
+                cc = f'**𝐕𝐈𝐃𝐄𝐎 𝐈𝐃 {str(count).zfill(3)}➪** {name1} {res} [Alex].mp4\n**𝗕𝗔𝗧𝗖𝗛 ➪** {raw_text0}\n\n**𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗕𝗬 ➪** {raw_text3}\n\n'
+                cc1 = f'**𝗣𝗗𝗙 𝗜𝗗 {str(count).zfill(3)}➪** {name1} [Alex].pdf \n**𝗕𝗔𝗧𝗖𝗛 ➪** {raw_text0}\n\n**𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗 𝗕𝗬 ➪** {raw_text3}\n\n'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
